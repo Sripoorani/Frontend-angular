@@ -1,0 +1,15 @@
+
+.card {
+    width: 400px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the card horizontally */
+    margin-top: 50px; /* Adjust margin-top as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  .card-body {
+    padding: 20px; /* Add padding inside the card */
+  }
+  
+  .card-title {
+    margin-bottom: 20px; /* Add margin to separate title from form */
+  }

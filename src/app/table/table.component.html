@@ -1,0 +1,41 @@
+
+
+<div class="content">
+<div style="float: right;" class="row">
+
+<div ><button class="btn btn-sm btn-primary" (click)="generatePDF()">Download Pdf</button></div>&nbsp;&nbsp;
+<button class="btn btn-sm btn-primary" (click)="ShowPdf()">View Pdf</button>
+</div>
+<table  class="custom-table">
+    <tr >
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let user of userList;let i = index">
+      <td>
+        <input type="text" [(ngModel)]="user.username" [readonly]="editMode" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="user.email" [readonly]="editMode" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="user.phone_number" [readonly]="editMode" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="user.address" [readonly]="editMode" />
+      </td>
+      <td>
+        <button  *ngIf="editMode" class="btn btn-sm btn-primary" (click)="toggleEditMode()">Edit</button>
+        <button *ngIf="!editMode" class="btn btn-sm btn-primary" (click)="updateUser(user)" >Save</button>
+
+        <button class="btn btn-sm btn-danger" (click)="deleteUser(user.user_id)">Delete</button>
+      </td>
+    </tr>
+    
+    
+  </table>
+
+</div>
